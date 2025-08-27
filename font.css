@@ -1,0 +1,7 @@
+﻿/*custom fonts*/
+@font-face {
+    font-family: 'DigitalDisco';
+    src: url('https://cdn.jsdelivr.net/gh/lazykeys/lazykeysBrandingAssets/DigitalDisco.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
