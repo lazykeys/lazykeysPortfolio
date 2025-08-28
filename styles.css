@@ -10,28 +10,44 @@ body
 h1 
 {
     font-family: 'DigitalDisco', monospace;
-    font-size: 24px;
+    font-size: 2.5em;
     color: #7474E8;
     font-weight: normal;
     font-style: normal;
-    margin-top: 100px;
+    margin-top: 5%;
+    padding-top: 5%;
+}
+
+/*header 2*/
+h2
+{
+    font-family: 'DigitalDisco', monospace;
+    font-size: 2em;
+    color: #7474E8;
+    font-weight: normal;
+    font-style: normal;
+    margin-top: 0em;
+    padding-top: 0em;
 }
 
 /*links*/
-a {
+a 
+{
     font-family: 'DigitalDisco';
-    font-size: 20px;
+    font-size: 1.5em;
     color: #b8b8ef;
-    margin-top: 100px;
-    margin-bottom: 20px;
+    margin-top: 0em;
+    margin-bottom: 0em;
 }
 
 /*lazykeys animated logo*/
-.lkAnimLogo {
+.lkAnimLogo
+{
     background-image: url('https://raw.githubusercontent.com/lazykeys/lazykeysBrandingAssets/main/lazykeys_LogoAnim.gif');
-    background-size: 30% auto;
+    background-size: 30%, auto;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: 0%;
+    margin-top: 0em;
     padding-top: 12%;
+    padding-bottom: 0em;
 }
