@@ -1,7 +1,8 @@
 /*html body*/
 body 
 {
-    margin: 0;
+    margin-top: 2.5%;
+    margin-bottom: 4%;
     background: #030318;
     text-align: center;
 }
@@ -9,45 +10,111 @@ body
 /*header 1*/
 h1 
 {
+    display: block;
     font-family: 'DigitalDisco', monospace;
-    font-size: 2.5em;
-    color: #7474E8;
+    font-size: 2.5rem;
     font-weight: normal;
     font-style: normal;
-    margin-top: 5%;
-    padding-top: 5%;
+    margin: 1rem, auto;
+    color: #7474E8;
 }
 
 /*header 2*/
-h2
+h2 
 {
+    display: block;
     font-family: 'DigitalDisco', monospace;
-    font-size: 2em;
-    color: #7474E8;
+    font-size: 2rem;
     font-weight: normal;
     font-style: normal;
-    margin-top: 0em;
-    padding-top: 0em;
+    margin: 1rem, auto;
+    color: #7474E8;
+}
+
+/*paragraph text*/
+p
+{
+    display: block;
+    font-family: "DigitalDisco", monospace;
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-style: normal;
+    margin: 1rem, auto;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    color: #4646CC;
 }
 
 /*links*/
 a 
 {
     font-family: 'DigitalDisco';
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-style: normal;
+    margin: 1rem, auto;
     color: #b8b8ef;
-    margin-top: 0em;
-    margin-bottom: 0em;
 }
+
+/*span container*/
+span 
+{
+    font-family: "DigitalDisco", monospace;
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-style: normal;
+    color: #4646CC;
+}
+
+/*unordered list*/
+ul 
+{
+    display: block;
+    list-style-position: inside;
+    padding-left: 45%;
+    text-align: left;
+    margin: 1rem, auto;
+}
+
+/*ordered list*/
+ol
+{
+    display: block;
+    list-style-position: inside;
+    padding-left: 45%;
+    text-align: left;
+    margin: 1rem, auto;
+}
+
+/*list items*/
+li 
+{
+    font-family: "DigitalDisco", monospace;
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-style: normal;
+    color: #4646CC;
+    margin: 0.3rem, 0;
+}
+
+/*horizontal line*/
+hr 
+{
+    border: none;
+    border-radius: 2px;
+    width: 75rem;
+    height: 5px;
+    background-color: #2E2E8C;
+}
+
+/*custom classes*/
 
 /*lazykeys animated logo*/
 .lkAnimLogo
 {
-    background-image: url('https://raw.githubusercontent.com/lazykeys/lazykeysBrandingAssets/main/lazykeys_LogoAnim.gif');
-    background-size: 30%, auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 0em;
-    padding-top: 12%;
-    padding-bottom: 0em;
+    display: block;
+    width: 25rem;
+    height: auto;
+    margin: auto;
+    padding-top: 2rem;
 }
