@@ -1,3 +1,12 @@
+/*root*/
+:root
+{
+    /*colors*/
+    --background_color: #030318;
+    --main_color: #615FDB;
+    --text_color: #ececff;
+}
+
 /*html body*/
 body 
 {
@@ -105,6 +114,11 @@ hr
     width: 75rem;
     height: 5px;
     background-color: #2E2E8C;
+}
+
+table, th, td 
+{
+    border: 1px solid red;
 }
 
 /*custom classes*/
