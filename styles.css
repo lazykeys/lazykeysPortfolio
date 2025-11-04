@@ -56,21 +56,28 @@ hr
         display: flex;
         border: 1px solid red;
         height: 60vh;
+        gap: 2rem;
     }
+        /*flex container for logo, name, career, and navigation links*/
+        .logoNameCareerLinksContainer
+        {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid blue;
+        }
+
         /*flex container for logo, name, and career in header*/
         .logoNameCareerContainer
         {
             display: flex;
-            border: 1px solid green;
             flex-direction: column;
-            flex-grow: 1;
-            padding-right: 25%;
+            border: 1px solid green;
         }
 
             /*lazykeys animated logo*/
             .lkAnimLogo
             {
-                width: 150%;
+                width: 25rem;
                 margin-bottom: 5%;
             }
 
@@ -93,6 +100,8 @@ hr
                 color: var(--text_color);
                 font-family: "Digital Disco";
                 font-size: 2.618rem;
+                margin-bottom: 1rem;
+                white-space: nowrap;
             }
 
             /*career item in noneList ul class*/
@@ -103,6 +112,24 @@ hr
                 font-size: 1.618rem;
             }
 
+        /*flex container for navigation links*/
+        .navigationLinksContainer
+        {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            border: 1px solid orange;
+        }
+        
+            .navigationLinksContainer ul
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                margin: 0;
+                padding: 0;
+            }
+
         /*flex container for about me text*/
         .aboutTextContainer
         {
@@ -111,18 +138,18 @@ hr
             flex-direction: column;
         }
         
-        /*ul flex container holding aboutMeText*/
-        .aboutTextContainer .noneList
-        {
-            display: flex;
-            border: 1px solid purple;
-            flex-direction: column;
-            flex-grow: 1;
-            
-            /*margin and padding for ul*/
-            margin: 0;
-            padding: 0;
-        }
+            /*ul flex container holding aboutMeText*/
+            .aboutTextContainer .noneList
+            {
+                display: flex;
+                border: 1px solid purple;
+                flex-direction: column;
+                flex-grow: 1;
+                
+                /*margin and padding for ul*/
+                margin: 0;
+                padding: 0;
+            }
 
             /*actual text in aboutTextContainer flex container*/
             .aboutTextContainer .noneList .aboutMeText
