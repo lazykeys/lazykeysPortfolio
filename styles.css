@@ -16,94 +16,24 @@ body
     text-align: center;
 }
 
-/*header 1*/
-h1 
-{
-    display: block;
-    font-family: 'DigitalDisco', monospace;
-    font-size: 2.5rem;
-    font-weight: normal;
-    font-style: normal;
-    margin: 1rem, auto;
-    color: #7474E8;
-}
-
-/*header 2*/
-h2 
-{
-    display: block;
-    font-family: 'DigitalDisco', monospace;
-    font-size: 2rem;
-    font-weight: normal;
-    font-style: normal;
-    margin: 1rem, auto;
-    color: #7474E8;
-}
-
-/*paragraph text*/
-p
-{
-    display: block;
-    font-family: "DigitalDisco", monospace;
-    font-size: 1.5rem;
-    font-weight: normal;
-    font-style: normal;
-    margin: 1rem, auto;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    color: #4646CC;
-}
-
 /*links*/
 a 
 {
-    font-family: 'DigitalDisco';
-    font-size: 1.5rem;
+    font-family: "Space Mono";
+    font-size: 1rem;
     font-weight: normal;
     font-style: normal;
     margin: 1rem, auto;
-    color: #b8b8ef;
-}
-
-/*span container*/
-span 
-{
-    font-family: "DigitalDisco", monospace;
-    font-size: 1.5rem;
-    font-weight: normal;
-    font-style: normal;
-    color: #4646CC;
-}
-
-/*unordered list*/
-ul 
-{
-    display: block;
-    list-style-position: inside;
-    padding-left: 45%;
-    text-align: left;
-    margin: 1rem, auto;
-}
-
-/*ordered list*/
-ol
-{
-    display: block;
-    list-style-position: inside;
-    padding-left: 45%;
-    text-align: left;
-    margin: 1rem, auto;
+    color: var(--main_color);
 }
 
 /*list items*/
 li 
 {
-    font-family: "DigitalDisco", monospace;
-    font-size: 1.5rem;
+    font-family: "Space Mono", monospace;
+    font-size: 1rem;
     font-weight: normal;
     font-style: normal;
-    color: #4646CC;
-    margin: 0.3rem, 0;
 }
 
 /*horizontal line*/
@@ -116,19 +46,89 @@ hr
     background-color: #2E2E8C;
 }
 
-table, th, td 
-{
-    border: 1px solid red;
-}
-
 /*custom classes*/
 
-/*lazykeys animated logo*/
-.lkAnimLogo
-{
-    display: block;
-    width: 25rem;
-    height: auto;
-    margin: auto;
-    padding-top: 2rem;
-}
+/* #region Header Classes */
+
+    /*parent flex container for header section */
+    .headerContainer
+    {
+        display: flex;
+        border: 1px solid red;
+        height: 60vh;
+    }
+        /*flex container for logo, name, and career in header*/
+        .logoNameCareerContainer
+        {
+            display: flex;
+            border: 1px solid green;
+            flex-direction: column;
+            flex-grow: 1;
+            padding-right: 25%;
+        }
+
+            /*lazykeys animated logo*/
+            .lkAnimLogo
+            {
+                width: 150%;
+                margin-bottom: 5%;
+            }
+
+            /*noneList class for ul of name and career*/
+            .noneList
+            {
+                list-style-type: none;
+                padding-left: 0%;
+            }
+
+            /*name and career items in noneList ul class*/
+            .noneList li
+            {
+                text-align: left;
+            }
+
+            /*name item in noneList ul class*/
+            .noneList .name
+            {
+                color: var(--text_color);
+                font-family: "Digital Disco";
+                font-size: 2.618rem;
+            }
+
+            /*career item in noneList ul class*/
+            .noneList .career
+            {
+                color: var(--text_color);
+                font-family: "Digital Disco";
+                font-size: 1.618rem;
+            }
+
+        /*flex container for about me text*/
+        .aboutTextContainer
+        {
+            display: flex;
+            border: 1px solid yellow;
+            flex-direction: column;
+        }
+        
+        /*ul flex container holding aboutMeText*/
+        .aboutTextContainer .noneList
+        {
+            display: flex;
+            border: 1px solid purple;
+            flex-direction: column;
+            flex-grow: 1;
+            
+            /*margin and padding for ul*/
+            margin: 0;
+            padding: 0;
+        }
+
+            /*actual text in aboutTextContainer flex container*/
+            .aboutTextContainer .noneList .aboutMeText
+            {
+                color: var(--text_color);
+                flex-grow: 1;
+            }
+
+/* #endregion */
