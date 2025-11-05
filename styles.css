@@ -75,7 +75,6 @@ li
         .headerContainer
         {
             display: flex;
-            border: 1px solid red;
             flex-direction: column;
             padding: 3rem;
             height: 100%;
@@ -83,7 +82,6 @@ li
 
             .logoNameCareerContainer
             {
-                border: 1px solid green;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
@@ -118,7 +116,6 @@ li
 
             .navigationLinksContainer
             {
-                border: 1px solid yellow;
                 width: 100%;
                 margin: 1rem 0rem;
                 padding: 0;
@@ -126,7 +123,6 @@ li
 
                 .navigationLinksContainer nav ul 
                 {
-                    border: 1px solid pink;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-evenly;
@@ -137,7 +133,6 @@ li
 
                 .navigationLinksContainer li
                 {
-                    border: 1px solid purple;
                     display: flex;
                 }
 
@@ -150,7 +145,6 @@ li
 
             .aboutTextContainer
             {
-                border: 1px solid beige;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -175,7 +169,6 @@ li
 
                 .aboutTextContainer .aboutText
                 {
-                    border: 1px solid seagreen;
                     color: var(--text_color);
                     text-align: left;
                 }
@@ -191,7 +184,6 @@ li
         .headerContainer
         {
             display: flex;
-            border: 1px solid red;
             flex-direction: column;
             padding: 3rem;
             height: 100%;
@@ -199,7 +191,6 @@ li
 
             .logoNameCareerContainer
             {
-                border: 1px solid green;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
@@ -234,7 +225,6 @@ li
 
             .navigationLinksContainer
             {
-                border: 1px solid yellow;
                 width: 100%;
                 margin: 1rem 0rem;
                 padding: 0;
@@ -242,7 +232,6 @@ li
 
                 .navigationLinksContainer nav ul 
                 {
-                    border: 1px solid pink;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-evenly;
@@ -253,7 +242,6 @@ li
 
                 .navigationLinksContainer li
                 {
-                    border: 1px solid purple;
                     display: flex;
                 }
 
@@ -266,7 +254,6 @@ li
 
             .aboutTextContainer
             {
-                border: 1px solid beige;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -291,7 +278,6 @@ li
 
                 .aboutTextContainer .aboutText
                 {
-                    border: 1px solid seagreen;
                     color: var(--text_color);
                     text-align: left;
                 }
@@ -308,7 +294,6 @@ li
         .headerContainer
         {
             display: grid;
-            border: 1px solid red;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
             padding: 3rem;
@@ -317,7 +302,6 @@ li
 
             .logoNameCareerContainer
             {
-                border: 1px solid green;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
@@ -352,14 +336,12 @@ li
 
             .navigationLinksContainer
             {
-                border: 1px solid yellow;
                 display: flex;
                 margin-top: 1rem;
             }
 
                 .navigationLinksContainer nav ul 
                 {
-                    border: 1px solid pink;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
@@ -368,7 +350,6 @@ li
 
                 .navigationLinksContainer li
                 {
-                    border: 1px solid purple;
                     display: flex;
                     text-align: left;
                     align-items: center;
@@ -385,7 +366,6 @@ li
 
             .aboutTextContainer
             {
-                border: 1px solid beige;
                 display: flex;
                 flex-direction: column;
                 max-width: 60rem;
@@ -407,12 +387,9 @@ li
 
                 .aboutTextContainer .aboutText
                 {
-                    border: 1px solid seagreen;
                     color: var(--text_color);
                     text-align: left;
                 }
-
-
 }
 
 /* #endregion */
