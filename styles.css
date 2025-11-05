@@ -36,16 +36,6 @@ li
     font-style: normal;
 }
 
-/*horizontal line*/
-hr 
-{
-    border: none;
-    border-radius: 2px;
-    width: 75rem;
-    height: 5px;
-    background-color: #2E2E8C;
-}
-
 /*custom classes*/
 
 /* #region Header Classes */
@@ -54,16 +44,16 @@ hr
     .headerContainer
     {
         display: flex;
-        border: 1px solid red;
         height: 60vh;
-        gap: 2rem;
+        justify-content: space-between;
+        gap: 1.5rem;
+        padding: 1.5rem;
     }
         /*flex container for logo, name, career, and navigation links*/
         .logoNameCareerLinksContainer
         {
             display: flex;
             flex-direction: column;
-            border: 1px solid blue;
         }
 
         /*flex container for logo, name, and career in header*/
@@ -71,7 +61,6 @@ hr
         {
             display: flex;
             flex-direction: column;
-            border: 1px solid green;
         }
 
             /*lazykeys animated logo*/
@@ -112,37 +101,23 @@ hr
                 font-size: 1.618rem;
             }
 
-        /*flex container for navigation links*/
-        .navigationLinksContainer
-        {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            border: 1px solid orange;
-        }
-        
-            .navigationLinksContainer ul
+            nav .noneList li
             {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                margin: 0;
-                padding: 0;
+                margin-bottom: 1rem;
             }
 
         /*flex container for about me text*/
         .aboutTextContainer
         {
             display: flex;
-            border: 1px solid yellow;
             flex-direction: column;
+            max-width: 60rem;
         }
         
             /*ul flex container holding aboutMeText*/
             .aboutTextContainer .noneList
             {
                 display: flex;
-                border: 1px solid purple;
                 flex-direction: column;
                 flex-grow: 1;
                 
@@ -158,4 +133,45 @@ hr
                 flex-grow: 1;
             }
 
+/* #endregion */
+
+/* #region Footer Classes */
+
+    footer
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+
+    }
+
+    .formatSvg
+    {
+        /*color svg to --main_color*/
+        filter: 
+            invert(92%)
+            sepia(47%)
+            saturate(3083%) 
+            hue-rotate(180deg) 
+            brightness(103%) 
+            contrast(112%);
+
+        /*change size*/
+        width: 2rem;
+    }
+
+    .footerColor
+    {
+        background-color: var(--main_color);
+        height: 5rem;
+    }
+
+    .svgContainer
+    {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+    }
 /* #endregion */
