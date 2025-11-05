@@ -42,11 +42,21 @@ h1
     margin: 0;
 }
 
+h2
+{
+    color: var(--text_color);
+    font-family: "Digital Disco", sans-serif;
+    font-weight: lighter;
+    font-size: 1rem;
+    text-align: left;
+    margin: 0;
+}
+
 a 
 {
     color: var(--link_color);
     font-size: 1rem;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 li 
@@ -149,7 +159,7 @@ li
                 flex-direction: column;
                 align-items: flex-start;
                 max-width: 60rem;
-                max-height: 65vh;
+                max-height: 100%;
                 text-align: left;
                 padding: 1rem;
             }
@@ -172,6 +182,45 @@ li
                     color: var(--text_color);
                     text-align: left;
                 }
+    /* #endregion */
+
+    /* #region Projects Showcase Classes */
+
+        .projectsGalleryContainer
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+
+        .projectsGalleryContainer h2
+        {
+            color: var(--link_color);
+            font-size: 1.618rem;
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        .projectsGalleryContainer p
+        {
+            color: var(--text_color);
+        }
+
+        .projectCard
+        {
+            border: 5px solid var(--main_color);
+            border-radius: 10%;
+            padding: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .gameThumbnail
+        {
+            border: 5px solid var(--main_color);
+            border-radius: 10%;
+        }
+    /* #endregion */
 }
 
 /*===== Tablet =====*/
@@ -281,6 +330,50 @@ li
                     color: var(--text_color);
                     text-align: left;
                 }
+    /* #endregion */
+
+    /* #region Projects Showcase Classes */
+
+        .projectsGalleryHeader h1
+        {
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+
+        .projectsGalleryContainer
+        {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100%;
+        }
+
+        .projectsGalleryContainer h2
+        {
+            color: var(--link_color);
+            font-size: 1.618rem;
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        .projectsGalleryContainer p
+        {
+            color: var(--text_color);
+        }
+
+        .projectCard
+        {
+            border: 5px solid var(--main_color);
+            border-radius: 10%;
+            padding: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .gameThumbnail
+        {
+            border: 5px solid var(--main_color);
+            border-radius: 10%;
+        }
+    /* #endregion */
 }
 
 /*===== Desktop =====*/
@@ -390,9 +483,67 @@ li
                     color: var(--text_color);
                     text-align: left;
                 }
+    /* #endregion */
+
+    /* #region Projects Showcase Classes */
+
+    .projectsGalleryContainer
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gameThumbnail
+    {
+        border: 5px solid var(--main_color);
+        border-radius: 10%;
+    }
+    /* #endregion */
+
+    /* #region Projects Showcase Classes */
+
+        .projectsGalleryHeader h1
+        {
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+
+        .projectsGalleryContainer
+        {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100%;
+        }
+
+        .projectsGalleryContainer h2
+        {
+            color: var(--link_color);
+            font-size: 1.618rem;
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        .projectsGalleryContainer p
+        {
+            color: var(--text_color);
+        }
+
+        .projectCard
+        {
+            border: 5px solid var(--main_color);
+            border-radius: 10%;
+            padding: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .gameThumbnail
+        {
+            border: 5px solid var(--main_color);
+            border-radius: 10%;
+        }
+    /* #endregion */
 }
 
-/* #endregion */
 
 /* #region Footer Classes */
 
