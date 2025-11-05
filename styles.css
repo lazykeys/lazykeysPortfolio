@@ -4,147 +4,425 @@
     /*colors*/
     --background_color: #030318;
     --main_color: #615FDB;
+    --link_color: #9292ED;
     --text_color: #ececff;
 }
 
-/*html body*/
+html
+{
+    height: 100%;
+    margin: 0;
+}
+
 body 
 {
-    margin-top: 2.5%;
-    margin-bottom: 4%;
-    background: #030318;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 2.5% 0 0 0;
+    background: var(--background_color);
     text-align: center;
+    font-family: "Space Mono", monospace;
 }
 
-/*links*/
+section
+{
+    flex-grow: 1;
+}
+
+/*===== Typography and Links =====*/
+
+h1
+{
+    color: var(--text_color);
+    font-family: "Digital Disco", sans-serif;
+    font-weight: lighter;
+    font-size: 1.618rem;
+    text-align: left;
+    margin: 0;
+}
+
 a 
 {
-    font-family: "Space Mono";
+    color: var(--link_color);
     font-size: 1rem;
-    font-weight: normal;
-    font-style: normal;
-    margin: 1rem, auto;
-    color: var(--main_color);
+    text-decoration: none;
 }
 
-/*list items*/
 li 
 {
-    font-family: "Space Mono", monospace;
     font-size: 1rem;
-    font-weight: normal;
-    font-style: normal;
 }
 
-/*custom classes*/
+/*===== Custom Classes =====*/
 
-/* #region Header Classes */
+/*=== Utility ===*/
 
-    /*parent flex container for header section */
-    .headerContainer
-    {
-        display: flex;
-        height: 60vh;
-        justify-content: space-between;
-        gap: 1.5rem;
-        padding: 1.5rem;
-    }
-        /*flex container for logo, name, career, and navigation links*/
-        .logoNameCareerLinksContainer
+.noneList
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*===== Mobile =====*/
+@media (max-width: 767px)
+{
+    
+    /* #region Header Classes */
+
+        /*=== Logo, Name, and Career ===*/
+        .headerContainer
         {
             display: flex;
+            border: 1px solid red;
             flex-direction: column;
+            padding: 3rem;
+            height: 100%;
         }
 
-        /*flex container for logo, name, and career in header*/
-        .logoNameCareerContainer
-        {
-            display: flex;
-            flex-direction: column;
-        }
-
-            /*lazykeys animated logo*/
-            .lkAnimLogo
+            .logoNameCareerContainer
             {
-                width: 25rem;
-                margin-bottom: 5%;
-            }
-
-            /*noneList class for ul of name and career*/
-            .noneList
-            {
-                list-style-type: none;
-                padding-left: 0%;
-            }
-
-            /*name and career items in noneList ul class*/
-            .noneList li
-            {
-                text-align: left;
-            }
-
-            /*name item in noneList ul class*/
-            .noneList .name
-            {
-                color: var(--text_color);
-                font-family: "Digital Disco";
-                font-size: 2.618rem;
-                margin-bottom: 1rem;
-                white-space: nowrap;
-            }
-
-            /*career item in noneList ul class*/
-            .noneList .career
-            {
-                color: var(--text_color);
-                font-family: "Digital Disco";
-                font-size: 1.618rem;
-            }
-
-            nav .noneList li
-            {
-                margin-bottom: 1rem;
-            }
-
-        /*flex container for about me text*/
-        .aboutTextContainer
-        {
-            display: flex;
-            flex-direction: column;
-            max-width: 60rem;
-        }
-        
-            /*ul flex container holding aboutMeText*/
-            .aboutTextContainer .noneList
-            {
+                border: 1px solid green;
                 display: flex;
                 flex-direction: column;
-                flex-grow: 1;
-                
-                /*margin and padding for ul*/
-                margin: 0;
+                justify-content: flex-start;
+            }
+
+                .lkAnimLogo
+                {
+                    width: 25rem;
+                    padding-top: 0.25rem;
+                    margin-bottom: 2rem;
+                }
+
+                .name
+                {
+                    color: var(--text_color);
+                    font-family: "Digital Disco", sans-serif;
+                    font-size: 2.618rem;
+                    margin-bottom: 1rem;
+                    white-space: nowrap;
+                    text-align: left;
+                }
+
+                .career
+                {
+                    color: var(--text_color);
+                    font-family: "Digital Disco", sans-serif;
+                    font-size: 1.618rem;
+                    text-align: left;
+                }
+
+            /*=== Navigation Links ===*/
+
+            .navigationLinksContainer
+            {
+                border: 1px solid yellow;
+                width: 100%;
+                margin: 1rem 0rem;
                 padding: 0;
             }
 
-            /*actual text in aboutTextContainer flex container*/
-            .aboutTextContainer .noneList .aboutMeText
+                .navigationLinksContainer nav ul 
+                {
+                    border: 1px solid pink;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .navigationLinksContainer li
+                {
+                    border: 1px solid purple;
+                    display: flex;
+                }
+
+                .navigationLinksContainer a
+                {
+                    height: 100%;
+                }
+
+            /*=== About Me Text ===*/
+
+            .aboutTextContainer
             {
-                color: var(--text_color);
-                flex-grow: 1;
+                border: 1px solid beige;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                max-width: 60rem;
+                max-height: 65vh;
+                text-align: left;
+                padding: 1rem;
             }
+
+                .aboutTextContainer h1
+                {
+                    padding-bottom: 1rem;
+                }
+
+                .aboutTextContainer ul
+                {
+                    display: flex;
+                    flex-grow: 1;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                .aboutTextContainer .aboutText
+                {
+                    border: 1px solid seagreen;
+                    color: var(--text_color);
+                    text-align: left;
+                }
+}
+
+/*===== Tablet =====*/
+@media (min-width: 768px)
+{
+    
+    /* #region Header Classes */
+
+        /*=== Logo, Name, and Career ===*/
+        .headerContainer
+        {
+            display: flex;
+            border: 1px solid red;
+            flex-direction: column;
+            padding: 3rem;
+            height: 100%;
+        }
+
+            .logoNameCareerContainer
+            {
+                border: 1px solid green;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+                .lkAnimLogo
+                {
+                    width: 25rem;
+                    padding-top: 0.25rem;
+                    margin-bottom: 2rem;
+                }
+
+                .name
+                {
+                    color: var(--text_color);
+                    font-family: "Digital Disco", sans-serif;
+                    font-size: 2.618rem;
+                    margin-bottom: 1rem;
+                    white-space: nowrap;
+                    text-align: left;
+                }
+
+                .career
+                {
+                    color: var(--text_color);
+                    font-family: "Digital Disco", sans-serif;
+                    font-size: 1.618rem;
+                    text-align: left;
+                }
+
+            /*=== Navigation Links ===*/
+
+            .navigationLinksContainer
+            {
+                border: 1px solid yellow;
+                width: 100%;
+                margin: 1rem 0rem;
+                padding: 0;
+            }
+
+                .navigationLinksContainer nav ul 
+                {
+                    border: 1px solid pink;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .navigationLinksContainer li
+                {
+                    border: 1px solid purple;
+                    display: flex;
+                }
+
+                .navigationLinksContainer a
+                {
+                    height: 100%;
+                }
+
+            /*=== About Me Text ===*/
+
+            .aboutTextContainer
+            {
+                border: 1px solid beige;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                max-width: 60rem;
+                max-height: 65vh;
+                text-align: left;
+                padding: 1rem;
+            }
+
+                .aboutTextContainer h1
+                {
+                    padding-bottom: 1rem;
+                }
+
+                .aboutTextContainer ul
+                {
+                    display: flex;
+                    flex-grow: 1;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                .aboutTextContainer .aboutText
+                {
+                    border: 1px solid seagreen;
+                    color: var(--text_color);
+                    text-align: left;
+                }
+}
+
+/*===== Desktop =====*/
+@media (min-width: 1024px)
+{
+
+    /* #region Header Classes */
+
+        /*=== Logo, Name, and Career ===*/
+
+        .headerContainer
+        {
+            display: grid;
+            border: 1px solid red;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            padding: 3rem;
+            height: 60vh;
+        }
+
+            .logoNameCareerContainer
+            {
+                border: 1px solid green;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+                .lkAnimLogo
+                {
+                    width: 25rem;
+                    padding-top: 0.25rem;
+                    margin-bottom: 2rem;
+                }
+
+                .name
+                {
+                    color: var(--text_color);
+                    font-family: "Digital Disco", sans-serif;
+                    font-size: 2.618rem;
+                    margin-bottom: 1rem;
+                    white-space: nowrap;
+                    text-align: left;
+                }
+
+                .career
+                {
+                    color: var(--text_color);
+                    font-family: "Digital Disco", sans-serif;
+                    font-size: 1.618rem;
+                    text-align: left;
+                }
+
+            /*=== Navigation Links ===*/
+
+            .navigationLinksContainer
+            {
+                border: 1px solid yellow;
+                display: flex;
+                margin-top: 1rem;
+            }
+
+                .navigationLinksContainer nav ul 
+                {
+                    border: 1px solid pink;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100%;
+                }
+
+                .navigationLinksContainer li
+                {
+                    border: 1px solid purple;
+                    display: flex;
+                    text-align: left;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding: 0.25rem 0rem;
+                }
+
+                .navigationLinksContainer a
+                {
+                    height: 100%;
+                }
+
+            /*=== About Me Text ===*/
+
+            .aboutTextContainer
+            {
+                border: 1px solid beige;
+                display: flex;
+                flex-direction: column;
+                max-width: 60rem;
+                max-height: 60vh;
+            }
+
+                .aboutTextContainer h1
+                {
+                    padding-bottom: 1rem;
+                }
+
+                .aboutTextContainer ul
+                {
+                    display: flex;
+                    flex-grow: 1;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                .aboutTextContainer .aboutText
+                {
+                    border: 1px solid seagreen;
+                    color: var(--text_color);
+                    text-align: left;
+                }
+
+
+}
 
 /* #endregion */
 
 /* #region Footer Classes */
 
-    footer
+    .footerColor
     {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-
+        background-color: var(--main_color);
+        height: 5rem;
     }
 
     .formatSvg
@@ -162,16 +440,11 @@ li
         width: 2rem;
     }
 
-    .footerColor
-    {
-        background-color: var(--main_color);
-        height: 5rem;
-    }
-
     .svgContainer
     {
         list-style-type: none;
         display: flex;
         justify-content: space-evenly;
+        align-content: center;
     }
 /* #endregion */
