@@ -1,3 +1,28 @@
+/*custom fonts*/
+
+/*Digital Disco*/
+@font-face {
+    font-family: 'Digital Disco';
+    src: url('https://cdn.jsdelivr.net/gh/lazykeys/lazykeysBrandingAssets/DigitalDisco.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Space Mono Regular*/
+@font-face 
+{
+    font-family: 'Space Mono';
+    src: url('https://cdn.jsdelivr.net/gh/lazykeys/lazykeysBrandingAssets/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Space Mono Bold*/
+@font-face {
+    font-family: 'Space Mono Bold';
+    src: url('https://cdn.jsdelivr.net/gh/lazykeys/lazykeysBrandingAssets/Space_Mono/SpaceMono-Bold.ttf') format('truetype');
+}
+
 /*root*/
 :root
 {
@@ -62,492 +87,117 @@ a
 li 
 {
     font-size: 1rem;
+    color: var(--text_color);
 }
 
 /*===== Custom Classes =====*/
 
 /*=== Utility ===*/
 
-.noneList
+.empty-list
 {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-/*===== Mobile =====*/
-@media (max-width: 767px)
+.about .empty-list
 {
-    
-    /* #region Header Classes */
-
-        /*=== Logo, Name, and Career ===*/
-        .headerContainer
-        {
-            display: flex;
-            flex-direction: column;
-            padding: 3rem;
-            height: 100%;
-        }
-
-            .logoNameCareerContainer
-            {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-            }
-
-                .lkAnimLogo
-                {
-                    width: 25rem;
-                    padding-top: 0.25rem;
-                    margin-bottom: 2rem;
-                }
-
-                .name
-                {
-                    color: var(--text_color);
-                    font-family: "Digital Disco", sans-serif;
-                    font-size: 2.618rem;
-                    margin-bottom: 1rem;
-                    white-space: nowrap;
-                    text-align: left;
-                }
-
-                .career
-                {
-                    color: var(--text_color);
-                    font-family: "Digital Disco", sans-serif;
-                    font-size: 1.618rem;
-                    text-align: left;
-                }
-
-            /*=== Navigation Links ===*/
-
-            .navigationLinksContainer
-            {
-                width: 100%;
-                margin: 1rem 0rem;
-                padding: 0;
-            }
-
-                .navigationLinksContainer nav ul 
-                {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-evenly;
-                    width: 100%;
-                    padding: 0;
-                    margin: 0;
-                }
-
-                .navigationLinksContainer li
-                {
-                    display: flex;
-                }
-
-                .navigationLinksContainer a
-                {
-                    height: 100%;
-                }
-
-            /*=== About Me Text ===*/
-
-            .aboutTextContainer
-            {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                max-width: 60rem;
-                max-height: 100%;
-                text-align: left;
-                padding: 1rem;
-            }
-
-                .aboutTextContainer h1
-                {
-                    padding-bottom: 1rem;
-                }
-
-                .aboutTextContainer ul
-                {
-                    display: flex;
-                    flex-grow: 1;
-                    flex-direction: column;
-                    justify-content: space-between;
-                }
-
-                .aboutTextContainer .aboutText
-                {
-                    color: var(--text_color);
-                    text-align: left;
-                }
-    /* #endregion */
-
-    /* #region Projects Showcase Classes */
-
-        .projectsGalleryContainer
-        {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100%;
-        }
-
-        .projectsGalleryContainer h2
-        {
-            color: var(--link_color);
-            font-size: 1.618rem;
-            text-align: center;
-            padding-top: 1rem;
-        }
-
-        .projectsGalleryContainer p
-        {
-            color: var(--text_color);
-        }
-
-        .projectCard
-        {
-            border: 5px solid var(--main_color);
-            border-radius: 10%;
-            padding: 1rem;
-            margin-bottom: 3rem;
-        }
-
-        .gameThumbnail
-        {
-            border: 5px solid var(--main_color);
-            border-radius: 10%;
-        }
-    /* #endregion */
+    justify-content: space-evenly;
 }
 
-/*===== Tablet =====*/
-@media (min-width: 768px)
+/* ===== Mobile-First Base ===== */
+
+header 
 {
-    
-    /* #region Header Classes */
-
-        /*=== Logo, Name, and Career ===*/
-        .headerContainer
-        {
-            display: flex;
-            flex-direction: column;
-            padding: 3rem;
-            height: 100%;
-        }
-
-            .logoNameCareerContainer
-            {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-            }
-
-                .lkAnimLogo
-                {
-                    width: 25rem;
-                    padding-top: 0.25rem;
-                    margin-bottom: 2rem;
-                }
-
-                .name
-                {
-                    color: var(--text_color);
-                    font-family: "Digital Disco", sans-serif;
-                    font-size: 2.618rem;
-                    margin-bottom: 1rem;
-                    white-space: nowrap;
-                    text-align: left;
-                }
-
-                .career
-                {
-                    color: var(--text_color);
-                    font-family: "Digital Disco", sans-serif;
-                    font-size: 1.618rem;
-                    text-align: left;
-                }
-
-            /*=== Navigation Links ===*/
-
-            .navigationLinksContainer
-            {
-                width: 100%;
-                margin: 1rem 0rem;
-                padding: 0;
-            }
-
-                .navigationLinksContainer nav ul 
-                {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-evenly;
-                    width: 100%;
-                    padding: 0;
-                    margin: 0;
-                }
-
-                .navigationLinksContainer li
-                {
-                    display: flex;
-                }
-
-                .navigationLinksContainer a
-                {
-                    height: 100%;
-                }
-
-            /*=== About Me Text ===*/
-
-            .aboutTextContainer
-            {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                max-width: 60rem;
-                max-height: 65vh;
-                text-align: left;
-                padding: 1rem;
-            }
-
-                .aboutTextContainer h1
-                {
-                    padding-bottom: 1rem;
-                }
-
-                .aboutTextContainer ul
-                {
-                    display: flex;
-                    flex-grow: 1;
-                    flex-direction: column;
-                    justify-content: space-between;
-                }
-
-                .aboutTextContainer .aboutText
-                {
-                    color: var(--text_color);
-                    text-align: left;
-                }
-    /* #endregion */
-
-    /* #region Projects Showcase Classes */
-
-        .projectsGalleryHeader h1
-        {
-            text-align: center;
-            padding-bottom: 2rem;
-        }
-
-        .projectsGalleryContainer
-        {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            height: 100%;
-        }
-
-        .projectsGalleryContainer h2
-        {
-            color: var(--link_color);
-            font-size: 1.618rem;
-            text-align: center;
-            padding-top: 1rem;
-        }
-
-        .projectsGalleryContainer p
-        {
-            color: var(--text_color);
-        }
-
-        .projectCard
-        {
-            border: 5px solid var(--main_color);
-            border-radius: 10%;
-            padding: 1rem;
-            margin-bottom: 3rem;
-        }
-
-        .gameThumbnail
-        {
-            border: 5px solid var(--main_color);
-            border-radius: 10%;
-        }
-    /* #endregion */
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
 }
 
-/*===== Desktop =====*/
-@media (min-width: 1024px)
+.logo 
 {
+    width: 100%;
+    max-width: 16rem;
+    margin-bottom: 1.5rem;
+}
 
-    /* #region Header Classes */
+.header-name
+{
+    font-size: 1.618rem;
+    font-family: "Digital Disco", monospace;
+}
 
-        /*=== Logo, Name, and Career ===*/
+.header-career
+{
+    font-size: 1rem;
+    font-family: "Digital Disco", monospace;
+}
 
-        .headerContainer
-        {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            padding: 3rem;
-            height: 60vh;
-        }
+nav ul 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto, auto;
+    gap: 0.5rem;
+    justify-items: center;
+}
 
-            .logoNameCareerContainer
-            {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-            }
+.about 
+{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem;
+}
 
-                .lkAnimLogo
-                {
-                    width: 25rem;
-                    padding-top: 0.25rem;
-                    margin-bottom: 2rem;
-                }
+/* ===== Tablet ===== */
+@media (min-width: 768px) 
+{
+    header 
+    {
+        padding: 3rem;
+        max-width: 70rem;
+        margin: auto;
+    }
 
-                .name
-                {
-                    color: var(--text_color);
-                    font-family: "Digital Disco", sans-serif;
-                    font-size: 2.618rem;
-                    margin-bottom: 1rem;
-                    white-space: nowrap;
-                    text-align: left;
-                }
+    .logo {
+        max-width: 22rem;
+    }
+}
 
-                .career
-                {
-                    color: var(--text_color);
-                    font-family: "Digital Disco", sans-serif;
-                    font-size: 1.618rem;
-                    text-align: left;
-                }
 
-            /*=== Navigation Links ===*/
+/* ===== Desktop ===== */
+@media (min-width: 1024px) 
+{
+    header {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 0rem;
+    }
 
-            .navigationLinksContainer
-            {
-                display: flex;
-                margin-top: 1rem;
-            }
+    .logo
+    {
+        width: auto;
+    }
 
-                .navigationLinksContainer nav ul 
-                {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    height: 100%;
-                }
+    nav ul 
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-                .navigationLinksContainer li
-                {
-                    display: flex;
-                    text-align: left;
-                    align-items: center;
-                    justify-content: flex-start;
-                    padding: 0.25rem 0rem;
-                }
-
-                .navigationLinksContainer a
-                {
-                    height: 100%;
-                }
-
-            /*=== About Me Text ===*/
-
-            .aboutTextContainer
-            {
-                display: flex;
-                flex-direction: column;
-                max-width: 60rem;
-                max-height: 60vh;
-            }
-
-                .aboutTextContainer h1
-                {
-                    padding-bottom: 1rem;
-                }
-
-                .aboutTextContainer ul
-                {
-                    display: flex;
-                    flex-grow: 1;
-                    flex-direction: column;
-                    justify-content: space-between;
-                }
-
-                .aboutTextContainer .aboutText
-                {
-                    color: var(--text_color);
-                    text-align: left;
-                }
-    /* #endregion */
-
-    /* #region Projects Showcase Classes */
-
-    .projectsGalleryContainer
+    .content-layout
     {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto, auto;
     }
-
-    .gameThumbnail
-    {
-        border: 5px solid var(--main_color);
-        border-radius: 10%;
-    }
-    /* #endregion */
-
-    /* #region Projects Showcase Classes */
-
-        .projectsGalleryHeader h1
-        {
-            text-align: center;
-            padding-bottom: 2rem;
-        }
-
-        .projectsGalleryContainer
-        {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            height: 100%;
-        }
-
-        .projectsGalleryContainer h2
-        {
-            color: var(--link_color);
-            font-size: 1.618rem;
-            text-align: center;
-            padding-top: 1rem;
-        }
-
-        .projectsGalleryContainer p
-        {
-            color: var(--text_color);
-        }
-
-        .projectCard
-        {
-            border: 5px solid var(--main_color);
-            border-radius: 10%;
-            padding: 1rem;
-            margin-bottom: 3rem;
-        }
-
-        .gameThumbnail
-        {
-            border: 5px solid var(--main_color);
-            border-radius: 10%;
-        }
-    /* #endregion */
 }
-
 
 /* #region Footer Classes */
 
-    .footerColor
+    footer
     {
         background-color: var(--main_color);
         height: 5rem;
