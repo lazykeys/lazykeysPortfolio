@@ -9,8 +9,7 @@
 }
 
 /*Space Mono Regular*/
-@font-face 
-{
+@font-face {
     font-family: 'Space Mono';
     src: url('https://cdn.jsdelivr.net/gh/lazykeys/lazykeysBrandingAssets/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
     font-weight: normal;
@@ -24,8 +23,7 @@
 }
 
 /*root*/
-:root
-{
+:root {
     /*colors*/
     --background_color: #030318;
     --main_color: #615FDB;
@@ -33,14 +31,12 @@
     --text_color: #ececff;
 }
 
-html
-{
+html {
     height: 100%;
     margin: 0;
 }
 
-body 
-{
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -50,43 +46,43 @@ body
     font-family: "Space Mono", monospace;
 }
 
-section
-{
+section {
     flex-grow: 1;
 }
 
 /*===== Typography and Links =====*/
 
-h1
-{
+h1 {
     color: var(--text_color);
-    font-family: "Digital Disco", sans-serif;
+    font-family: "Digital Disco", monospace;
     font-weight: lighter;
     font-size: 1.618rem;
     text-align: left;
     margin: 0;
 }
 
-h2
-{
+h2 {
     color: var(--text_color);
-    font-family: "Digital Disco", sans-serif;
+    font-family: "Digital Disco", monospace;
     font-weight: lighter;
     font-size: 1rem;
     text-align: left;
     margin: 0;
 }
 
-a 
-{
+strong {
+    font-weight: normal;
     color: var(--link_color);
-    font-size: 1rem;
+}
+
+a {
+    color: var(--link_color);
+    font-family: "Digital Disco", monospace;
+    font-size: 1.618rem;
     text-decoration: underline;
 }
 
-li 
-{
-    font-size: 1rem;
+li {
     color: var(--text_color);
 }
 
@@ -94,135 +90,175 @@ li
 
 /*=== Utility ===*/
 
-.empty-list
-{
+.empty-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.about .empty-list
-{
-    justify-content: space-evenly;
+.about {
+    height: 100%;
+}
+
+.about .empty-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85%;
+    margin-top: 1rem;
+    margin-right: 3rem;
+}
+
+.inline-link {
+    font-size: 1rem;
 }
 
 /* ===== Mobile-First Base ===== */
 
-header 
-{
+header {
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
+    height: 100%;
 }
 
-.logo 
-{
+.logo {
     width: 100%;
-    max-width: 16rem;
-    margin-bottom: 1.5rem;
+    max-width: 22rem;
+    margin-bottom: 1rem;
 }
 
-.header-name
-{
+.header-name {
+    text-align: left;
+    font-size: 2.618rem;
+    font-family: "Digital Disco", monospace;
+    margin-bottom: 0.5rem;
+}
+
+.header-career {
+    text-align: left;
     font-size: 1.618rem;
     font-family: "Digital Disco", monospace;
+    margin-bottom: 0.5rem;
 }
 
-.header-career
-{
-    font-size: 1rem;
+.header-statement {
+    text-align: left;
+    font-size: 1.618rem;
     font-family: "Digital Disco", monospace;
+    margin-bottom: 0.5rem;
 }
 
-nav ul 
-{
+header nav ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto, auto;
+    grid-template-rows: auto auto;
     gap: 0.5rem;
-    justify-items: center;
+    justify-content: center;
 }
 
-.about 
-{
+footer nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 30%;
+}
+
+.about {
     display: flex;
     flex-direction: column;
     text-align: left;
     padding: 1rem;
 }
 
+.content-layout {
+    display: flex;
+    flex-direction: column;
+}
+
 /* ===== Tablet ===== */
-@media (min-width: 768px) 
-{
-    header 
-    {
+@media (min-width: 768px) {
+    header {
         padding: 3rem;
         max-width: 70rem;
         margin: auto;
     }
 
     .logo {
+        width: 100%;
         max-width: 22rem;
     }
 }
 
 
 /* ===== Desktop ===== */
-@media (min-width: 1024px) 
-{
+@media (min-width: 1024px) {
     header {
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 0rem;
     }
 
-    .logo
-    {
-        width: auto;
+    .logo {
+        max-width: 36rem;
     }
 
-    nav ul 
-    {
+    header nav ul {
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
+        justify-content: space-between;
     }
 
-    .content-layout
-    {
+    footer nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 30%;
+    }
+
+    .content-layout {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto, auto;
+        grid-template-rows: auto 1fr;
+        height: 80vh;
+    }
+
+    .about {
+        margin-top: 3rem;
+    }
+
+    .about .empty-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 85%;
+        margin-top: 1rem;
     }
 }
 
 /* #region Footer Classes */
 
-    footer
-    {
-        background-color: var(--main_color);
-        height: 5rem;
-    }
+footer {
+    background-color: var(--main_color);
+    height: 100%;
+    width: 100%;
+}
 
-    .formatSvg
-    {
-        /*color svg to --main_color*/
-        filter: 
-            invert(92%)
-            sepia(47%)
-            saturate(3083%) 
-            hue-rotate(180deg) 
-            brightness(103%) 
-            contrast(112%);
+.formatSvg {
+    /*color svg to --main_color*/
+    filter:
+        invert(92%) sepia(47%) saturate(3083%) hue-rotate(180deg) brightness(103%) contrast(112%);
 
-        /*change size*/
-        width: 2rem;
-    }
+    /*change size*/
+    width: 2rem;
+}
 
-    .svgContainer
-    {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-evenly;
-        align-content: center;
-    }
+.svgContainer {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
 /* #endregion */
