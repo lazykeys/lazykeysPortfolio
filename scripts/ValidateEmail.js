@@ -9,3 +9,4 @@
  */
 
 const form = document.getElementById("contact-form");
+const submitButton = document.getElementById("submit-contact-button");

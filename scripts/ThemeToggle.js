@@ -47,12 +47,12 @@ toggleButton.addEventListener("click", () => {
 function toggleSVG(light) {
 
     if (light) {
-        toggleButtonSvg.src = "./images/svgs/moon.svg";
+        toggleButtonSvg.src = "images/svgs/moon.svg";
         toggleButtonSvg.classList.remove("svg-theme-button");
         toggleButtonSvg.classList.add("svg-theme-button-light");
     }
     else {
-        toggleButtonSvg.src = "./images/svgs/sun.svg";
+        toggleButtonSvg.src = "images/svgs/sun.svg";
         toggleButtonSvg.classList.remove("svg-theme-button-light");
         toggleButtonSvg.classList.add("svg-theme-button");
     }
