@@ -1,0 +1,149 @@
+﻿<!--
+Name: Jagger Walraven
+Course: CSCI 220 Web Programming
+Date Last Updated: 12/08/2025
+Purpose: Details the HTML structure of my portfolio website's landing page
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--Page Head-->
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+
+	<!--Page Title-->
+	<title>lazykeys</title>
+
+	<!--Description and Keywords-->
+	<meta name="description"
+		content="lazykeys, also known as Jagger Walraven, is a game programmer and Lead Programmer, who specializes in descriptive documentation, efficiency, tools programming, and leading other programmers." />
+	<meta name="keywords"
+		content="lazykeys, Jagger Walraven, Game Programming, Game Development, Programming, C#, Lead Programmer, Documentation, Custom Tools, AI Navigation, Dialogue Trees" />
+
+	<!--Favicon-->
+	<link rel="icon" type="image/x-icon" href='images/lazykeys_Favicon.ico' />
+
+	<!--Styling-->
+	<link rel="stylesheet" href="/styles.css" />
+
+	<!--Scripts-->
+	<script src="/scripts/ThemeToggle.js" defer></script>
+
+</head>
+
+<!--Page Body-->
+
+<body>
+
+	<!--About Page Header-->
+	<section aria-labelledby="about-me-content">
+
+		<div class="contrast-button-align">
+			<button id="contrast-button" aria-label="contrast-button">
+				<img src="/images/svgs/sun.svg" class="svg-theme-button" id="theme-svg">
+			</button>
+		</div>
+
+		<div class="content-layout">
+			<!--Logo, Name, and Links-->
+			<header>
+				<div>
+					<div>
+						<!--lazykeys Animated Logo-->
+						<img src="/images/lazykeys_LogoAnim.gif" alt="" aria-hidden="true" class="logo" />
+
+						<!--Name and Career-->
+						<ul class="empty-list">
+							<li class="header-name">Jagger Walraven</li>
+							<li class="header-career">Game Programmer</li>
+							<li class="header-statement">I develop for the <strong>player</strong> and the
+								<strong>programmer.</strong>
+							</li>
+						</ul>
+					</div>
+
+					<br>
+
+					<!--Page Links-->
+					<nav role="navigation" aria-label="main site navigation">
+
+						<ul class="empty-list">
+							<li><a href="#about-me">About</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="skills.html">Skills</a></li>
+							<li><a href="resume.html">Resume</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<!--About Me Description-->
+			<main aria-labelledby="about-me-description">
+				<div class="about">
+
+					<h1 id="about-me" aria-label="about-me">About Me:</h1>
+
+					<ul class="empty-list">
+						<li>Hello! My name is Jagger Walraven, also known as lazykeys. I'm a game programmer and
+							developer based in the Midwest. My language and game engine of choice is C# and Unity,
+							but I
+							also have experience with C++ and Unreal.</li>
+						<li>I have a passion for growth, always looking to expand my skillset. I pride myself in
+							providing helpful tools, descriptive documentation, and efficient code as a guiding
+							foundation for other
+							programmers.</li>
+						<li>I've created custom tools for 3 projects that
+							expedited certain processes, such as AI navigation, level design, and dialogue trees.
+						</li>
+						<li>I'm probably working on a game right now, so be sure to tune into my <a href=""
+								class="inline-link">YouTube</a>
+							channel to catch my latest development news.</li>
+					</ul>
+				</div>
+			</main>
+		</div>
+	</section>
+
+	<!--Gradient Before Footer-->
+	<div class="gradient" aria-hidden="true"></div>
+
+	<!--Links Footer-->
+	<footer>
+		<nav role="navigation" aria-label="social-media-links">
+
+			<ul class="svgContainer">
+				<li>
+					<a href="https://lazykeys.itch.io/" target="_blank">
+						<img class="formatSvg" src="/images/svgs/itchio.svg" alt="itch.io link">
+					</a>
+				</li>
+
+				<li>
+					<a href="https://github.com/lazykeys" target="_blank">
+						<img class="formatSvg" src="/images/svgs/github.svg" alt="Github.com link">
+					</a>
+				</li>
+
+				<li>
+					<a href="" target="_blank">
+						<img class="formatSvg" src="/images/svgs/youtube.svg" alt="YouTube.com link">
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.linkedin.com/in/jaggerwalraven/" target="_blank">
+						<img class="formatSvg" src="/images/svgs/linkedin.svg" alt="LinkedIn.com link">
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+</body>
+
+</html>

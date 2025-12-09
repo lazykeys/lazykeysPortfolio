@@ -17,7 +17,7 @@ Purpose: Details the HTML structure of my portfolio website's landing page
 	<meta name="viewport" content="width = device-width, initial-scale = 1.0" />
 
 	<!--Page Title-->
-	<title>Contact Me</title>
+	<title>Skills</title>
 
 	<!--Description and Keywords-->
 	<meta name="description"
@@ -29,11 +29,10 @@ Purpose: Details the HTML structure of my portfolio website's landing page
 	<link rel="icon" type="image/x-icon" href='images/lazykeys_Favicon.ico' />
 
 	<!--Styling-->
-	<link rel="stylesheet" href="styles.css" />
+	<link rel="stylesheet" href="/styles.css" />
 
-
-	<!--PDFOBject Script-->
-	<script src="https://unpkg.com/pdfobject"></script>
+	<!--Scripts-->
+	<script src="/scripts/ThemeToggle.js" defer></script> <!--Theme Toggle-->
 </head>
 
 <!--Page Body-->
@@ -43,13 +42,19 @@ Purpose: Details the HTML structure of my portfolio website's landing page
 	<!--Page Header-->
 	<section aria-labelledby="about-me-content">
 
+		<div class="contrast-button-align">
+			<button id="contrast-button" aria-label="contrast-button">
+				<img src="/images/svgs/sun.svg" class="svg-theme-button" id="theme-svg">
+			</button>
+		</div>
+
 		<div class="content-layout">
 			<!--Page Title and Links-->
 			<header>
 				<div>
 					<div>
-						<h1 class="page-title">Contact</h1>
-						<h2 class="header-statement"> Here's how we can <strong>get in touch.</strong></h2>
+						<h1 class="page-title">Skills</h1>
+						<h2 class="header-statement"> Here's what I can <strong>do.</strong></h2>
 					</div>
 
 					<br>
@@ -60,38 +65,60 @@ Purpose: Details the HTML structure of my portfolio website's landing page
 						<ul class="empty-list">
 							<li><a href="index.html">About</a></li>
 							<li><a href="projects.html">Projects</a></li>
-							<li><a href="skills.html">Skills</a></li>
+							<li><a href="#skills">Skills</a></li>
 							<li><a href="resume.html">Resume</a></li>
-							<li><a href="#contact-me">Contact</a></li>
+							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
 			</header>
 
-			<!--Contact-->
-			<main aria-labelledby="contact">
-				<div id="contact-me">
-					<form action="#" method="post">
-						<fieldset>
-							<div class="label-align">
-								<label for="email">Email:</label>
-							</div>
-
-							<div class="email-container">
-								<input id="email" name="email" type="email" required aria-required="true">
-							</div>
-
-							<div class="label-align">
-								<label for="message">Message:</label>
-							</div>
-
-							<div class="textarea-container">
-								<textarea id="message" name="message" rows="7" required aria-required="true"></textarea>
-							</div>
-
-							<input type="submit" value="Send">
-						</fieldset>
-					</form>
+			<!--Tools Table-->
+			<main aria-labelledby="tools">
+				<div class="table-scroll-container">
+					<div id="skills" class="table-border">
+						<table>
+							<thead>
+								<tr>
+									<th>Game Engines</th>
+									<th>Programming Languages</th>
+									<th>Platforms</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Unity</td>
+									<td>C#</td>
+									<td>Git</td>
+								</tr>
+								<tr>
+									<td>Unreal</td>
+									<td>C++</td>
+									<td>Github</td>
+								</tr>
+								<tr>
+									<td>PICO-8</td>
+									<td>Java</td>
+									<td>Visual Studio</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Javascript</td>
+									<td>Visual Studio Code</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Python</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Lua</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</main>
 		</div>
@@ -107,25 +134,25 @@ Purpose: Details the HTML structure of my portfolio website's landing page
 			<ul class="svgContainer">
 				<li>
 					<a href="https://lazykeys.itch.io/" target="_blank">
-						<img class="formatSvg" src="images/svgs/itchio.svg" alt="itch.io link">
+						<img class="formatSvg" src="/images/svgs/itchio.svg" alt="itch.io link">
 					</a>
 				</li>
 
 				<li>
 					<a href="https://github.com/lazykeys" target="_blank">
-						<img class="formatSvg" src="images/svgs/github.svg" alt="Github.com link">
+						<img class="formatSvg" src="/images/svgs/github.svg" alt="Github.com link">
 					</a>
 				</li>
 
 				<li>
 					<a href="" target="_blank">
-						<img class="formatSvg" src="images/svgs/youtube.svg" alt="YouTube.com link">
+						<img class="formatSvg" src="/images/svgs/youtube.svg" alt="YouTube.com link">
 					</a>
 				</li>
 
 				<li>
 					<a href="https://www.linkedin.com/in/jaggerwalraven/" target="_blank">
-						<img class="formatSvg" src="images/svgs/linkedin.svg" alt="LinkedIn.com link">
+						<img class="formatSvg" src="/images/svgs/linkedin.svg" alt="LinkedIn.com link">
 					</a>
 				</li>
 			</ul>
