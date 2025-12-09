@@ -434,7 +434,7 @@ th {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto 1fr;
-        height: calc(100vh - 5rem);
+        height: calc(100vh - 7rem);
     }
 
     .about {
