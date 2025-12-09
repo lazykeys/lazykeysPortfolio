@@ -8,4 +8,4 @@
  * 12/09/2025 ver 1.0: Initial script
  */
 
-//const form = 
+const form = document.getElementById("contact-form");
