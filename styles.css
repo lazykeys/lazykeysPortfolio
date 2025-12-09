@@ -42,8 +42,48 @@ body {
     overflow-x: hidden;
 }
 
-section, main {
+section,
+main {
     flex-grow: 1;
+}
+
+fieldset {
+    border: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 60vh;
+}
+
+label {
+    display: block;
+    font-family: "Space Mono", monospace;
+}
+
+input[type=submit] {
+    border: 5px solid var(--link_color);
+    border-radius: 15px;
+    background-color: var(--main_color);
+    width: 10rem;
+    height: 3.5rem;
+    font-family: "Digital Disco", monospace;
+    font-size: 1.618rem;
+    color: var(--text_color);
+    margin-top: 1rem;
+}
+
+input[type=email],
+textarea {
+    border: 3px solid var(--link_color);
+    border-radius: 15px;
+    font-family: "Space Mono", monospace;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
 }
 
 /*===== Typography and Links =====*/
@@ -82,8 +122,7 @@ a {
     text-decoration: underline;
 }
 
-.project-link
-{
+.project-link {
     text-decoration: none;
     font-family: "Space Mono", monospace;
     font-size: 1rem;
@@ -128,8 +167,7 @@ li {
     font-size: 1rem;
 }
 
-.pdfobject-container
-{
+.pdfobject-container {
     margin: 0 auto 3rem auto;
     width: 60%;
     height: 80vh;
@@ -152,8 +190,7 @@ header {
     margin-bottom: 1rem;
 }
 
-.page-title
-{
+.page-title {
     text-align: center;
     font-size: clamp(48px, 10vw, 82px);
 }
@@ -187,8 +224,7 @@ header nav ul {
     justify-content: center;
 }
 
-header nav ul > :last-child
-{
+header nav ul> :last-child {
     grid-column: span 2;
 }
 
@@ -211,15 +247,13 @@ footer nav ul {
     flex-direction: column;
 }
 
-.project-gallery
-{
+.project-gallery {
     display: flex;
     flex-direction: column;
     padding: 0rem;
 }
 
-.project
-{
+.project {
     border: 5px solid var(--link_color);
     background-color: var(--main_color);
     border-radius: 15px;
@@ -227,26 +261,22 @@ footer nav ul {
     height: 100%;
 }
 
-.project-title
-{
+.project-title {
     text-align: center;
 }
 
-.table-scroll-container
-{
+.table-scroll-container {
     overflow-x: scroll;
 }
 
-.table-border
-{
+.table-border {
     width: fit-content;
     border: 5px solid var(--link_color);
     border-radius: 15px;
-    margin: 1rem;
+    margin: 0 auto;
 }
 
-table
-{
+table {
     border-collapse: collapse;
     border: 5px solid var(--link_color);
     background-color: var(--main_color);
@@ -254,10 +284,20 @@ table
     margin: 0;
 }
 
-th, td
-{
+th,
+td {
     border: 5px solid var(--link_color);
     padding: 0.5rem
+}
+
+.email-container,
+.textarea-container {
+    width: 80%;
+    padding-right: 0.5rem;
+}
+
+.textarea-container {
+    height: 60%;
 }
 
 /* ===== Tablet ===== */
@@ -269,6 +309,14 @@ th, td
         margin: auto;
     }
 
+    .table-border {
+        margin: 0 auto;
+    }
+
+    input[type=submit] {
+        margin-bottom: 1rem;
+    }
+
     .logo {
         width: 100%;
         max-width: 22rem;
@@ -278,13 +326,11 @@ th, td
         width: 60%;
     }
 
-    header nav ul > :last-child
-    {
+    header nav ul> :last-child {
         grid-column: span 2;
     }
 
-    .table-scroll-container
-    {
+    .table-scroll-container {
         overflow: hidden;
     }
 }
@@ -293,8 +339,7 @@ th, td
 /* ===== Desktop ===== */
 @media (min-width: 1024px) {
 
-    body
-    {
+    body {
         overflow-y: hidden;
     }
 
@@ -304,25 +349,31 @@ th, td
         gap: 0rem;
     }
 
+    fieldset {
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+    }
+
     .logo {
         max-width: 36rem;
     }
 
-    .page-title
-    {
+    .page-title {
         text-align: left;
         font-size: clamp(48px, 10vw, 82px);
     }
 
-    .header-name{
+    .header-name {
         text-align: left;
     }
 
-    .header-career{
+    .header-career {
         text-align: left;
     }
 
-    .header-statement{
+    .header-statement {
         text-align: left;
     }
 
@@ -360,24 +411,20 @@ th, td
         margin-top: 1rem;
     }
 
-    .project 
-    {
+    .project {
         transition: transform 0.3s ease;
     }
 
-    .project img
-    {
+    .project img {
         width: auto;
         height: auto;
     }
 
-    .project:hover
-    {
+    .project:hover {
         transform: scale(1.05);
     }
 
-    .project-gallery
-    {
+    .project-gallery {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
@@ -390,8 +437,7 @@ th, td
         padding-bottom: 175px;
     }
 
-    .pdfobject-container
-    {
+    .pdfobject-container {
         height: 75vh;
         width: 45vw;
         border: 5px solid var(--link_color);
@@ -399,14 +445,13 @@ th, td
         margin: 3rem 6rem 0rem 0rem;
     }
 
-    .table-border
-    {
+    .table-border {
         margin: 3rem 6rem 0rem 0rem;
         overflow: hidden;
     }
 
-    th, td
-    {
+    th,
+    td {
         padding: 1rem;
     }
 
