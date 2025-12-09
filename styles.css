@@ -137,6 +137,10 @@ textarea {
     display: none;
 }
 
+#contact-me {
+    height: 80vh;
+}
+
 /*===== Typography and Links =====*/
 
 h1 {
@@ -320,6 +324,10 @@ footer nav ul {
     font-size: 1.618rem;
     text-align: center;
     margin: 0;
+}
+
+.table-container {
+    height: 60vh;
 }
 
 .table-scroll-container {
