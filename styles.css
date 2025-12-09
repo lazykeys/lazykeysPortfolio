@@ -16,12 +16,6 @@
     font-style: normal;
 }
 
-/*Space Mono Bold*/
-@font-face {
-    font-family: 'Space Mono Bold';
-    src: url('https://cdn.jsdelivr.net/gh/lazykeys/lazykeysBrandingAssets/Space_Mono/SpaceMono-Bold.ttf') format('truetype');
-}
-
 /*root*/
 :root {
     /*colors*/
@@ -40,13 +34,15 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 2.5% 0 0 0;
+    margin: 0;
     background: var(--background_color);
     text-align: center;
     font-family: "Space Mono", monospace;
+    color: var(--text_color);
+    overflow-x: hidden;
 }
 
-section {
+section, main {
     flex-grow: 1;
 }
 
@@ -75,18 +71,37 @@ strong {
     color: var(--link_color);
 }
 
+p {
+    color: var(--text_color);
+}
+
 a {
     color: var(--link_color);
     font-family: "Digital Disco", monospace;
-    font-size: 1.618rem;
+    font-size: 1.309rem;
     text-decoration: underline;
+}
+
+.project-link
+{
+    text-decoration: none;
+    font-family: "Space Mono", monospace;
+    font-size: 1rem;
 }
 
 li {
     color: var(--text_color);
 }
 
-/*===== Custom Classes =====*/
+/*===== Visuals =====*/
+
+.project img {
+    width: 80%;
+    height: auto;
+    border: 5px solid var(--link_color);
+    border-radius: 15px;
+    margin: 1rem;
+}
 
 /*=== Utility ===*/
 
@@ -113,6 +128,15 @@ li {
     font-size: 1rem;
 }
 
+.pdfobject-container
+{
+    margin: 0 auto 3rem auto;
+    width: 60%;
+    height: 80vh;
+    border: 5px solid var(--link_color);
+    border-radius: 10px;
+}
+
 /* ===== Mobile-First Base ===== */
 
 header {
@@ -128,23 +152,29 @@ header {
     margin-bottom: 1rem;
 }
 
+.page-title
+{
+    text-align: center;
+    font-size: clamp(48px, 10vw, 82px);
+}
+
 .header-name {
-    text-align: left;
+    text-align: center;
     font-size: 2.618rem;
     font-family: "Digital Disco", monospace;
     margin-bottom: 0.5rem;
 }
 
 .header-career {
-    text-align: left;
+    text-align: center;
     font-size: 1.618rem;
     font-family: "Digital Disco", monospace;
     margin-bottom: 0.5rem;
 }
 
 .header-statement {
-    text-align: left;
-    font-size: 1.618rem;
+    text-align: center;
+    font-size: 1.309rem;
     font-family: "Digital Disco", monospace;
     margin-bottom: 0.5rem;
 }
@@ -157,11 +187,16 @@ header nav ul {
     justify-content: center;
 }
 
+header nav ul > :last-child
+{
+    grid-column: span 2;
+}
+
 footer nav ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    max-width: 30%;
+    max-width: 100%;
 }
 
 .about {
@@ -176,8 +211,58 @@ footer nav ul {
     flex-direction: column;
 }
 
+.project-gallery
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0rem;
+}
+
+.project
+{
+    border: 5px solid var(--link_color);
+    background-color: var(--main_color);
+    border-radius: 15px;
+    margin: 1rem;
+    height: 100%;
+}
+
+.project-title
+{
+    text-align: center;
+}
+
+.table-scroll-container
+{
+    overflow-x: scroll;
+}
+
+.table-border
+{
+    width: fit-content;
+    border: 5px solid var(--link_color);
+    border-radius: 15px;
+    margin: 1rem;
+}
+
+table
+{
+    border-collapse: collapse;
+    border: 5px solid var(--link_color);
+    background-color: var(--main_color);
+    width: max-content;
+    margin: 0;
+}
+
+th, td
+{
+    border: 5px solid var(--link_color);
+    padding: 0.5rem
+}
+
 /* ===== Tablet ===== */
 @media (min-width: 768px) {
+
     header {
         padding: 3rem;
         max-width: 70rem;
@@ -188,11 +273,26 @@ footer nav ul {
         width: 100%;
         max-width: 22rem;
     }
+
+    .project img {
+        width: 60%;
+    }
+
+    header nav ul > :last-child
+    {
+        grid-column: span 2;
+    }
+
+    .table-scroll-container
+    {
+        overflow: hidden;
+    }
 }
 
 
 /* ===== Desktop ===== */
 @media (min-width: 1024px) {
+
     header {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -201,6 +301,24 @@ footer nav ul {
 
     .logo {
         max-width: 36rem;
+    }
+
+    .page-title
+    {
+        text-align: left;
+        font-size: clamp(48px, 10vw, 82px);
+    }
+
+    .header-name{
+        text-align: left;
+    }
+
+    .header-career{
+        text-align: left;
+    }
+
+    .header-statement{
+        text-align: left;
     }
 
     header nav ul {
@@ -221,11 +339,12 @@ footer nav ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto 1fr;
-        height: 80vh;
+        height: calc(100vh - 5rem);
     }
 
     .about {
         margin-top: 3rem;
+        height: 85%;
     }
 
     .about .empty-list {
@@ -235,14 +354,75 @@ footer nav ul {
         height: 85%;
         margin-top: 1rem;
     }
+
+    .project 
+    {
+        transition: transform 0.3s ease;
+    }
+
+    .project img
+    {
+        width: auto;
+        height: auto;
+    }
+
+    .project:hover
+    {
+        transform: scale(1.05);
+    }
+
+    .project-gallery
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        height: 100vh;
+        row-gap: 2rem;
+        box-sizing: border-box;
+        padding-bottom: 175px;
+    }
+
+    .pdfobject-container
+    {
+        height: 75vh;
+        width: 45vw;
+        border: 5px solid var(--link_color);
+        border-radius: 10px;
+        margin: 3rem 6rem 0rem 0rem;
+    }
+
+    .table-border
+    {
+        margin: 3rem 6rem 0rem 0rem;
+        overflow: hidden;
+    }
+
+    th, td
+    {
+        padding: 1rem;
+    }
+
+    .gradient {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--background_color));
+    }
 }
 
 /* #region Footer Classes */
 
 footer {
+    position: relative;
     background-color: var(--main_color);
     height: 100%;
     width: 100%;
+    border-top: 2px solid var(--link_color);
 }
 
 .formatSvg {

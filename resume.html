@@ -1,0 +1,114 @@
+<!--
+Name: Jagger Walraven
+Course: CSCI 220 Web Programming
+Date Last Updated: 12/08/2025
+Purpose: Details the HTML structure of my portfolio website's landing page
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<!--Page Head-->
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+
+		<!--Page Title-->
+		<title>Resume</title>
+
+		<!--Description and Keywords-->
+		<meta name="description"
+			content="lazykeys, also known as Jagger Walraven, is a game programmer and Lead Programmer, who specializes in descriptive documentation, efficiency, tools programming, and leading other programmers." />
+		<meta name="keywords"
+			content="lazykeys, Jagger Walraven, Game Programming, Game Development, Programming, C#, Lead Programmer, Documentation, Custom Tools, AI Navigation, Dialogue Trees" />
+
+		<!--Favicon-->
+		<link rel="icon" type="image/x-icon" href='images/lazykeys_Favicon.ico' />
+
+		<!--Styling-->
+		<link rel="stylesheet" href="styles.css" />
+
+        
+		<!--PDFOBject Script-->
+		<script src="https://unpkg.com/pdfobject"></script>
+	</head>
+    
+	<!--Page Body-->
+    
+	<body>
+        
+        <!--Page Header-->
+		<section aria-labelledby="about-me-content">
+            
+			<div class="content-layout">
+                <!--Page Title and Links-->
+				<header>
+                    <div>
+                        <div>
+                            <h1 class="page-title">Resume</h1>
+							<h2 class="header-statement"> Here's what's <strong>behind the work.</strong></h2>
+						</div>
+                        
+						<br>
+                        
+						<!--Page Links-->
+						<nav role="navigation" aria-label="main site navigation">
+                            
+                            <ul class="empty-list">
+                                <li><a href="index.html">About</a></li>
+								<li><a href="projects.html">Projects</a></li>
+								<li><a href="skills.html">Skills</a></li>
+								<li><a href="#my-pdf">Resume</a></li>
+								<li><a href="contact.html">Contact Me</a></li>
+							</ul>
+						</nav>
+					</div>
+				</header>
+                
+				<!--Resume Viewer-->
+				<main aria-labelledby="resume">
+                    <div  id="my-pdf" class="pdfobject-container"></div>
+                    <script>PDFObject.embed("files/Resume_Jagger_Walraven.pdf", "#my-pdf");</script>
+                </main>
+			</div>
+		</section>
+        
+		<!--Gradient Before Footer-->
+		<div class="gradient" aria-hidden="true"></div>
+        
+		<!--Links Footer-->
+		<footer>
+            <nav role="navigation" aria-label="social-media-links">
+                
+                <ul class="svgContainer">
+                    <li>
+                        <a href="https://lazykeys.itch.io/">
+                            <img class="formatSvg" src="images/svgs/itchio.svg" alt="itch.io link">
+						</a>
+					</li>
+                    
+					<li>
+						<a href="https://github.com/lazykeys">
+                            <img class="formatSvg" src="images/svgs/github.svg" alt="Github.com link">
+						</a>
+					</li>
+                    
+					<li>
+                        <a href="">
+                            <img class="formatSvg" src="images/svgs/youtube.svg" alt="YouTube.com link">
+						</a>
+					</li>
+                    
+					<li>
+                        <a href="https://www.linkedin.com/in/jaggerwalraven/">
+                            <img class="formatSvg" src="images/svgs/linkedin.svg" alt="LinkedIn.com link">
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+	</body>
+
+</html>
