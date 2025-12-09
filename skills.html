@@ -1,8 +1,8 @@
 <!--
 Name: Jagger Walraven
 Course: CSCI 220 Web Programming
-Date Last Updated: 12/08/2025
-Purpose: Details the HTML structure of my portfolio website's landing page
+Date Last Updated: 12/09/2025
+Purpose: Details the HTML structure of my portfolio website's skills page
 -->
 
 <!DOCTYPE html>
@@ -14,22 +14,21 @@ Purpose: Details the HTML structure of my portfolio website's landing page
 <head>
 
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+	<meta name="viewport" content="width = device-width, initial-scale = 1.0">
 
 	<!--Page Title-->
 	<title>Skills</title>
 
 	<!--Description and Keywords-->
-	<meta name="description"
-		content="lazykeys, also known as Jagger Walraven, is a game programmer and Lead Programmer, who specializes in descriptive documentation, efficiency, tools programming, and leading other programmers." />
+	<meta name="description" content="The game engines, programming languages, and other tools I am skilled at.">
 	<meta name="keywords"
-		content="lazykeys, Jagger Walraven, Game Programming, Game Development, Programming, C#, Lead Programmer, Documentation, Custom Tools, AI Navigation, Dialogue Trees" />
+		content="lazykeys, Jagger Walraven, Game Programming, Game Development, Programming, Unity, Unity Engine, Unreal, Unreal Engine, C#, C++, Javascript, Python, Lua, Git, Github, Visual Studio, Visual Studio Code">
 
 	<!--Favicon-->
-	<link rel="icon" type="image/x-icon" href='images/lazykeys_Favicon.ico' />
+	<link rel="icon" type="image/x-icon" href='images/lazykeys_Favicon.ico'>
 
 	<!--Styling-->
-	<link rel="stylesheet" href="styles.css" />
+	<link rel="stylesheet" href="styles.css">
 
 	<!--Scripts-->
 	<script src="scripts/ThemeToggle.js" defer></script> <!--Theme Toggle-->
@@ -40,11 +39,11 @@ Purpose: Details the HTML structure of my portfolio website's landing page
 <body>
 
 	<!--Page Header-->
-	<section aria-labelledby="about-me-content">
+	<main>
 
 		<div class="contrast-button-align">
 			<button id="contrast-button" aria-label="contrast-button">
-				<img src="images/svgs/sun.svg" class="svg-theme-button" id="theme-svg">
+				<img src="images/svgs/sun.svg" class="svg-theme-button" id="theme-svg" alt="">
 			</button>
 		</div>
 
@@ -53,14 +52,14 @@ Purpose: Details the HTML structure of my portfolio website's landing page
 			<header>
 				<div>
 					<div>
-						<h1 class="page-title">Skills</h1>
+						<h1 class="page-title" id="skills">Skills</h1>
 						<h2 class="header-statement"> Here's what I can <strong>do.</strong></h2>
 					</div>
 
 					<br>
 
 					<!--Page Links-->
-					<nav role="navigation" aria-label="main site navigation">
+					<nav aria-label="main site navigation">
 
 						<ul class="empty-list">
 							<li><a href="index.html">About</a></li>
@@ -73,10 +72,10 @@ Purpose: Details the HTML structure of my portfolio website's landing page
 				</div>
 			</header>
 
-			<!--Tools Table-->
-			<main aria-labelledby="tools">
+			<!--Skills Table-->
+			<section aria-labelledby="skills">
 				<div class="table-scroll-container">
-					<div id="skills" class="table-border">
+					<div class="table-border">
 						<table>
 							<thead>
 								<tr>
@@ -120,39 +119,39 @@ Purpose: Details the HTML structure of my portfolio website's landing page
 						</table>
 					</div>
 				</div>
-			</main>
+			</section>
 		</div>
-	</section>
+	</main>
 
 	<!--Gradient Before Footer-->
 	<div class="gradient" aria-hidden="true"></div>
 
 	<!--Links Footer-->
 	<footer>
-		<nav role="navigation" aria-label="social-media-links">
+		<nav aria-label="social-media-links">
 
 			<ul class="svgContainer">
 				<li>
-					<a href="https://lazykeys.itch.io/" target="_blank">
-						<img class="formatSvg" src="images/svgs/itchio.svg" alt="itch.io link">
+					<a href="https://lazykeys.itch.io/" target="_blank" aria-label="Itch Page">
+						<img class="formatSvg" src="images/svgs/itchio.svg" alt="" aria-hidden="true">
 					</a>
 				</li>
 
 				<li>
-					<a href="https://github.com/lazykeys" target="_blank">
-						<img class="formatSvg" src="images/svgs/github.svg" alt="Github.com link">
+					<a href="https://github.com/lazykeys" target="_blank" aria-label="Github Profile">
+						<img class="formatSvg" src="images/svgs/github.svg" alt="" aria-hidden="true">
 					</a>
 				</li>
 
 				<li>
-					<a href="" target="_blank">
-						<img class="formatSvg" src="images/svgs/youtube.svg" alt="YouTube.com link">
+					<a href="" target="_blank" aria-label="YouTube Channel">
+						<img class="formatSvg" src="images/svgs/youtube.svg" alt="" aria-hidden="true">
 					</a>
 				</li>
 
 				<li>
-					<a href="https://www.linkedin.com/in/jaggerwalraven/" target="_blank">
-						<img class="formatSvg" src="images/svgs/linkedin.svg" alt="LinkedIn.com link">
+					<a href="https://www.linkedin.com/in/jaggerwalraven/" target="_blank" aria-label="LinkedIn Profile">
+						<img class="formatSvg" src="images/svgs/linkedin.svg" alt="" aria-hidden="true">
 					</a>
 				</li>
 			</ul>

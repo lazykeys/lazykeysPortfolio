@@ -42,18 +42,15 @@ toggleButton.addEventListener("click", () => {
         localStorage.setItem("theme", "dark"); //save dark mode to local storage
         toggleSVG(false);
     }
-})
+});
 
+//function that toggles the svg image based on boolean parameter
 function toggleSVG(light) {
 
     if (light) {
         toggleButtonSvg.src = "images/svgs/moon.svg";
-        toggleButtonSvg.classList.remove("svg-theme-button");
-        toggleButtonSvg.classList.add("svg-theme-button-light");
     }
     else {
         toggleButtonSvg.src = "images/svgs/sun.svg";
-        toggleButtonSvg.classList.remove("svg-theme-button-light");
-        toggleButtonSvg.classList.add("svg-theme-button");
     }
 }

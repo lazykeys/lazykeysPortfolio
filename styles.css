@@ -23,10 +23,11 @@
     --main_color: #615FDB;
     --link_color: #9292ED;
     --text_color: #ececff;
+    --svg_color: brightness(0) saturate(100%) invert(92%) sepia(58%) saturate(5369%) hue-rotate(180deg) brightness(107%) contrast(101%);
 }
 
 .enable-theme-transitions * {
-    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, filter 0.4s ease;
 }
 
 .light-mode {
@@ -35,6 +36,7 @@
     --main_color: #9292ED;
     --link_color: #615FDB;
     --text_color: #030318;
+    --svg_color: brightness(0) saturate(100%) invert(41%) sepia(32%) saturate(7496%) hue-rotate(228deg) brightness(92%) contrast(86%);
 }
 
 html {
@@ -47,6 +49,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    flex-grow: 1;
     background: var(--background_color);
     text-align: center;
     font-family: "Space Mono", monospace;
@@ -86,6 +89,16 @@ label {
     font-size: 1.618rem;
 }
 
+.label-align {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    height: 25%;
+    margin: 1rem;
+}
+
 input[type=submit] {
     border: 5px solid var(--link_color);
     border-radius: 15px;
@@ -96,6 +109,14 @@ input[type=submit] {
     font-size: 1.618rem;
     color: var(--text_color);
     margin-top: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+input[type=submit]:hover {
+    background-color: var(--text_color);
+    color: var(--background_color);
+    transition: 0.2s ease;
 }
 
 input[type=email],
@@ -110,6 +131,10 @@ textarea {
     width: 100%;
     height: 100%;
     resize: none;
+}
+
+.hidden {
+    display: none;
 }
 
 /*===== Typography and Links =====*/
@@ -289,7 +314,12 @@ footer nav ul {
 }
 
 .project-title {
+    color: var(--text_color);
+    font-family: "Digital Disco", monospace;
+    font-weight: lighter;
+    font-size: 1.618rem;
     text-align: center;
+    margin: 0;
 }
 
 .table-scroll-container {
@@ -364,6 +394,13 @@ th {
 
     .table-scroll-container {
         overflow: hidden;
+    }
+
+    .label-align {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 20rem;
     }
 }
 
@@ -505,6 +542,16 @@ th {
     .textarea-container {
         min-height: 20rem;
     }
+
+    .label-align {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        width: 30%;
+        height: 30%;
+    }
 }
 
 /* #region Footer Classes */
@@ -529,7 +576,7 @@ footer {
 .svg-theme-button {
     /*color svg to --main_color*/
     filter:
-        invert(92%) sepia(47%) saturate(3083%) hue-rotate(180deg) brightness(103%) contrast(112%);
+        var(--svg_color);
 
     /*change size*/
     width: 2rem;
@@ -537,15 +584,9 @@ footer {
     position: fixed;
 }
 
-.svg-theme-button-light {
-    /*color svg to --main_color*/
-    filter:
-        brightness(0) saturate(100%) invert(48%) sepia(51%) saturate(5702%) hue-rotate(225deg) brightness(88%) contrast(94%);
-
-    /*change size*/
-    width: 2rem;
-
-    position: fixed;
+.svg-validation {
+    filter: var(--svg_color);
+    width: 1.5rem;
 }
 
 .svgContainer {
