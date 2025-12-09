@@ -40,7 +40,6 @@ body {
     font-family: "Space Mono", monospace;
     color: var(--text_color);
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 section, main {
@@ -293,6 +292,11 @@ th, td
 
 /* ===== Desktop ===== */
 @media (min-width: 1024px) {
+
+    body
+    {
+        overflow-y: hidden;
+    }
 
     header {
         display: grid;
